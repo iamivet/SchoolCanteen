@@ -28,13 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cmbFoodTypes = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanelFoods = new System.Windows.Forms.FlowLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // cmbFoodTypes
+            // 
+            this.cmbFoodTypes.FormattingEnabled = true;
+            this.cmbFoodTypes.Location = new System.Drawing.Point(251, 12);
+            this.cmbFoodTypes.Name = "cmbFoodTypes";
+            this.cmbFoodTypes.Size = new System.Drawing.Size(210, 21);
+            this.cmbFoodTypes.TabIndex = 0;
+            // 
+            // flowLayoutPanelFoods
+            // 
+            this.flowLayoutPanelFoods.Location = new System.Drawing.Point(12, 51);
+            this.flowLayoutPanelFoods.Name = "flowLayoutPanelFoods";
+            this.flowLayoutPanelFoods.Size = new System.Drawing.Size(776, 387);
+            this.flowLayoutPanelFoods.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.flowLayoutPanelFoods);
+            this.Controls.Add(this.cmbFoodTypes);
+            this.Name = "Form1";
+            this.Text = "SchoolCanteen";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cmbFoodTypes;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFoods;
     }
 }
 
