@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SchoolCanteen.Data
 {
-    internal class FoodType
+    public class FoodType
     {
+        public int Id { get; set; }
+        public int Name { get; set; }
+
+        public ICollection<Food> Foods { get; set; }
     }
 }
