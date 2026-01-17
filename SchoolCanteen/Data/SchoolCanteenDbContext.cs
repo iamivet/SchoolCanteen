@@ -1,6 +1,14 @@
-﻿namespace SchoolCanteen.Data
+﻿using System.Data.Entity;
+
+namespace SchoolCanteen.Data
 {
-    public class DbContext
+    public class SchoolCanteenDbContext : DbContext
     {
+        public SchoolCanteenDbContext() : base("name=SchoolCanteenDbConnectionString")
+        {
+        }
+        
+            
+        
     }
 }
