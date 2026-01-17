@@ -8,7 +8,8 @@ namespace SchoolCanteen.Data
         {
         }
         
-            
-        
+        public DbSet<Food> Foods { get; set; }
+        public DbSet<FoodType> FoodTypes { get; set; }
+
     }
 }
