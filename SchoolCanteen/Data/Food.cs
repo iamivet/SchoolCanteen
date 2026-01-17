@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SchoolCanteen.Data
 {
-    internal class Food
+    public class Food
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Calories { get; set; }
+        public decimal Price { get; set; }
+        public int FoodTypeId { get; set; }
+        public FoodType FoodType { get; set; }
     }
 }
