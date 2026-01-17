@@ -39,9 +39,11 @@
             this.cmbFoodTypes.Name = "cmbFoodTypes";
             this.cmbFoodTypes.Size = new System.Drawing.Size(210, 21);
             this.cmbFoodTypes.TabIndex = 0;
+            this.cmbFoodTypes.SelectedIndexChanged += new System.EventHandler(this.cmbFoodTypes_SelectedIndexChanged);
             // 
             // flowLayoutPanelFoods
             // 
+            this.flowLayoutPanelFoods.AutoScroll = true;
             this.flowLayoutPanelFoods.Location = new System.Drawing.Point(12, 51);
             this.flowLayoutPanelFoods.Name = "flowLayoutPanelFoods";
             this.flowLayoutPanelFoods.Size = new System.Drawing.Size(776, 387);
@@ -51,6 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanelFoods);
             this.Controls.Add(this.cmbFoodTypes);

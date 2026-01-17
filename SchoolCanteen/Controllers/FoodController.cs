@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolCanteen.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,18 @@ using System.Threading.Tasks;
 
 namespace SchoolCanteen.Controllers
 {
-    internal class FoodController
+    public class FoodController
     {
+        private SchoolCanteenDbContext dbContext;
+
+        public FoodController()
+        {
+            dbContext = new SchoolCanteenDbContext();
+        }
+
+        public List<Food> GetFoods()
+        {
+            return dbContext.Foods.ToList();
+        }
     }
 }
