@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FoodController.cs" />
+    <Compile Include="Controllers\FoodTypeController.cs" />
     <Compile Include="Data\SchoolCanteenDbContext.cs" />
     <Compile Include="Data\Food.cs" />
     <Compile Include="Data\FoodType.cs" />
@@ -76,14 +77,24 @@
     <Compile Include="Migrations\202601171340499_InitialMigration.Designer.cs">
       <DependentUpon>202601171340499_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202601171532531_ChangeNameType.cs" />
+    <Compile Include="Migrations\202601171532531_ChangeNameType.Designer.cs">
+      <DependentUpon>202601171532531_ChangeNameType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FoodCard.resx">
+      <DependentUpon>FoodCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202601171340499_InitialMigration.resx">
       <DependentUpon>202601171340499_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202601171532531_ChangeNameType.resx">
+      <DependentUpon>202601171532531_ChangeNameType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
