@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolCanteen.Controllers
 {
@@ -69,6 +67,20 @@ namespace SchoolCanteen.Controllers
             {
                 throw new NullReferenceException("Food isn't found");
             }
+        }
+
+        public void AddFood(string foodName, int calories, decimal price, int foodTypeId)
+        {
+            var food = new Food
+            {
+                Name = foodName,
+                Calories = calories,
+                Price = price,
+                FoodTypeId = foodTypeId
+            };
+
+            dbContext.Foods.Add(food);
+            dbContext.SaveChanges();
         }
     }
 }

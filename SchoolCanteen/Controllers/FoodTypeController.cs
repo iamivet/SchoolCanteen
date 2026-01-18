@@ -16,11 +16,15 @@ namespace SchoolCanteen.Controllers
             dbContext = new SchoolCanteenDbContext();
         }
 
-        public List<string> GetAllFoodTypes()
+        public List<FoodType> GetAllFoodTypes()
         {
             return dbContext.FoodTypes
-                .Select(f => f.Name)
                 .ToList();
+        }
+
+        public FoodType GetById(int id)
+        {
+            return dbContext.FoodTypes.Find(id);
         }
     }
 }
