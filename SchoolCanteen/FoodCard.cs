@@ -53,12 +53,7 @@ namespace SchoolCanteen
             txtNewCalories.Text=lblCalories.Text.Substring(0, lblCalories.Text.Length - 5);
             txtNewPrice.Text=lblPrice.Text.Substring(0, lblPrice.Text.Length - 3);
 
-            txtNewName.Visible = true;
-            txtNewCalories.Visible = true;
-            txtNewPrice.Visible = true;
-            btnUpdate.Visible = true;
-
-
+            ChangeVisible(true, false, true);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -69,10 +64,8 @@ namespace SchoolCanteen
 
                 FoodUpdate?.Invoke(this);
 
-                txtNewName.Visible = false;
-                txtNewCalories.Visible = false;
-                txtNewPrice.Visible = false;
-                btnUpdate.Visible = false;
+                ChangeVisible(false, true, false);
+
             }
             catch (Exception ex)
             {
@@ -86,6 +79,24 @@ namespace SchoolCanteen
             lblFoodName.Text = food.Name;
             lblCalories.Text = $"{food.Calories} kcal";
             lblPrice.Text = $"{food.Price} lv";
+        }
+
+        private void ChangeVisible(bool textBoxVisible, bool DeleteAndEditButtonVisible, bool updateAndBackButtonVisible)
+        {
+            txtNewName.Visible = textBoxVisible;
+            txtNewCalories.Visible = textBoxVisible;
+            txtNewPrice.Visible = textBoxVisible;
+
+            btnDelete.Visible = DeleteAndEditButtonVisible;
+            btnEdit.Visible = DeleteAndEditButtonVisible;
+
+            btnUpdate.Visible = updateAndBackButtonVisible;
+            btnBack.Visible = updateAndBackButtonVisible;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ChangeVisible(false, true, false);
         }
     }
 }

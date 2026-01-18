@@ -83,21 +83,7 @@ namespace SchoolCanteen
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            flowLayoutPanelFoods.Visible = false;
-            btnAddFood.Visible = false;
-
-            lblCalories.Visible = true;
-            lblName.Visible = true;
-            lblPrice.Visible = true;
-            lblType.Visible = true;
-
-            cmbFoodTypes.Visible = true;
-
-            txtCalories.Visible = true;
-            txtName.Visible = true;
-            txtPrice.Visible = true;
-
-            btnAdd.Visible = true;
+            ChangeVisible(false,true,true,true,false,true);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -132,22 +118,7 @@ namespace SchoolCanteen
 
                 LoadFoodCards();
 
-
-                flowLayoutPanelFoods.Visible = true;
-                btnAddFood.Visible = true;
-
-                lblCalories.Visible = false;
-                lblName.Visible = false;
-                lblPrice.Visible = false;
-                lblType.Visible = false;
-
-                cmbFoodTypes.Visible = false;
-
-                txtCalories.Visible = false;
-                txtName.Visible = false;
-                txtPrice.Visible = false;
-
-                btnAdd.Visible = false;
+                ChangeVisible(true, false, false, false, true, false);
 
             }
             catch (Exception ex)
@@ -155,6 +126,40 @@ namespace SchoolCanteen
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+
+        private void ChangeVisible(bool flowLayoutPanelVisible, bool labelsVisible, bool textBoxVisible, bool comboboxVisible, bool addFoodButtonVisible, bool addAndBackButtonVisible)
+        {
+            flowLayoutPanelFoods.Visible = flowLayoutPanelVisible;
+            ChangeLabelsVisible(labelsVisible);
+            ChangeTextBoxesVisible(textBoxVisible);
+            cmbFoodTypes.Visible = comboboxVisible;
+            btnAddFood.Visible = addFoodButtonVisible;
+            btnAdd.Visible = addAndBackButtonVisible;
+            btnBack.Visible = addAndBackButtonVisible;
+        }
+
+
+        private void ChangeLabelsVisible(bool isVisible)
+        {
+            lblCalories.Visible = isVisible;
+            lblName.Visible = isVisible;
+            lblPrice.Visible = isVisible;
+            lblType.Visible = isVisible;
+            lblTitle.Visible = isVisible;
+        }
+
+        private void ChangeTextBoxesVisible(bool isVisible)
+        {
+            txtCalories.Visible = isVisible;
+            txtName.Visible = isVisible;
+            txtPrice.Visible = isVisible;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ChangeVisible(true, false, false, false, true, false);
         }
     }
 }

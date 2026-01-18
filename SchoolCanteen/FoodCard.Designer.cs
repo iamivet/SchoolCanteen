@@ -37,23 +37,25 @@
             this.txtNewCalories = new System.Windows.Forms.TextBox();
             this.txtNewPrice = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFoodName
             // 
             this.lblFoodName.AutoSize = true;
-            this.lblFoodName.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFoodName.Location = new System.Drawing.Point(84, 18);
+            this.lblFoodName.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFoodName.Location = new System.Drawing.Point(23, 11);
             this.lblFoodName.Name = "lblFoodName";
-            this.lblFoodName.Size = new System.Drawing.Size(51, 22);
+            this.lblFoodName.Size = new System.Drawing.Size(56, 25);
             this.lblFoodName.TabIndex = 0;
             this.lblFoodName.Text = "label1";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(271, 19);
+            this.btnDelete.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDelete.Location = new System.Drawing.Point(255, 11);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(93, 37);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(271, 62);
+            this.btnEdit.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEdit.Location = new System.Drawing.Point(255, 54);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(93, 37);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -72,58 +75,75 @@
             // lblCalories
             // 
             this.lblCalories.AutoSize = true;
+            this.lblCalories.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCalories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCalories.Location = new System.Drawing.Point(25, 72);
             this.lblCalories.Name = "lblCalories";
-            this.lblCalories.Size = new System.Drawing.Size(35, 13);
+            this.lblCalories.Size = new System.Drawing.Size(42, 18);
             this.lblCalories.TabIndex = 3;
             this.lblCalories.Text = "label1";
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPrice.Location = new System.Drawing.Point(121, 72);
+            this.lblPrice.Location = new System.Drawing.Point(190, 71);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(35, 13);
+            this.lblPrice.Size = new System.Drawing.Size(42, 18);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "label1";
             // 
             // txtNewName
             // 
-            this.txtNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtNewName.Location = new System.Drawing.Point(28, 18);
+            this.txtNewName.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtNewName.Location = new System.Drawing.Point(12, 11);
             this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(209, 26);
+            this.txtNewName.Size = new System.Drawing.Size(209, 29);
             this.txtNewName.TabIndex = 5;
             this.txtNewName.Visible = false;
             // 
             // txtNewCalories
             // 
+            this.txtNewCalories.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtNewCalories.Location = new System.Drawing.Point(12, 69);
             this.txtNewCalories.Name = "txtNewCalories";
-            this.txtNewCalories.Size = new System.Drawing.Size(93, 20);
+            this.txtNewCalories.Size = new System.Drawing.Size(93, 24);
             this.txtNewCalories.TabIndex = 6;
             this.txtNewCalories.Visible = false;
             // 
             // txtNewPrice
             // 
-            this.txtNewPrice.Location = new System.Drawing.Point(124, 69);
+            this.txtNewPrice.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtNewPrice.Location = new System.Drawing.Point(137, 70);
             this.txtNewPrice.Name = "txtNewPrice";
-            this.txtNewPrice.Size = new System.Drawing.Size(95, 20);
+            this.txtNewPrice.Size = new System.Drawing.Size(95, 24);
             this.txtNewPrice.TabIndex = 7;
             this.txtNewPrice.Visible = false;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(271, 62);
+            this.btnUpdate.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdate.Location = new System.Drawing.Point(255, 54);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(93, 37);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBack.Location = new System.Drawing.Point(255, 11);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(93, 37);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FoodCard
             // 
@@ -131,6 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtNewPrice);
             this.Controls.Add(this.txtNewCalories);
@@ -159,5 +180,6 @@
         private System.Windows.Forms.TextBox txtNewCalories;
         private System.Windows.Forms.TextBox txtNewPrice;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnBack;
     }
 }
