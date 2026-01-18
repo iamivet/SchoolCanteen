@@ -21,13 +21,49 @@ namespace SchoolCanteen.Controllers
             return dbContext.Foods.ToList();
         }
 
-        public void DeleteFood(string foodName)
+        public void DeleteFood(int foodId)
         {
-            var food = dbContext.Foods.FirstOrDefault(f => f.Name == foodName);
+
+            var food = dbContext.Foods.FirstOrDefault(f => f.Id == foodId);
             if (food != null)
             {
                 dbContext.Foods.Remove(food);
                 dbContext.SaveChanges();
+            }
+            else
+            {
+                throw new NullReferenceException("Food isn't found");
+            }
+        }
+
+        public void EditFood(int foodId,string foodName,string calories,string price)
+        {
+          
+            var food = dbContext.Foods.FirstOrDefault(f => f.Id == foodId);
+
+            if (food != null)
+            {
+                food.Name = foodName;
+                food.Calories = int.Parse(calories);
+                food.Price = decimal.Parse(price);
+
+                dbContext.SaveChanges();
+            }
+            else
+            {
+                throw new NullReferenceException("Food isn't found");
+            }
+
+        }
+
+
+        public Food GetFoodById(int id)
+        {
+            var food= dbContext.Foods.AsNoTracking().FirstOrDefault(f => f.Id == id);
+
+            if (food != null)
+            {
+                return food;
             }
             else
             {

@@ -33,13 +33,17 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblCalories = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
+            this.txtNewName = new System.Windows.Forms.TextBox();
+            this.txtNewCalories = new System.Windows.Forms.TextBox();
+            this.txtNewPrice = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFoodName
             // 
             this.lblFoodName.AutoSize = true;
             this.lblFoodName.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFoodName.Location = new System.Drawing.Point(73, 18);
+            this.lblFoodName.Location = new System.Drawing.Point(84, 18);
             this.lblFoodName.Name = "lblFoodName";
             this.lblFoodName.Size = new System.Drawing.Size(51, 22);
             this.lblFoodName.TabIndex = 0;
@@ -63,6 +67,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblCalories
             // 
@@ -84,12 +89,52 @@
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "label1";
             // 
+            // txtNewName
+            // 
+            this.txtNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtNewName.Location = new System.Drawing.Point(28, 18);
+            this.txtNewName.Name = "txtNewName";
+            this.txtNewName.Size = new System.Drawing.Size(209, 26);
+            this.txtNewName.TabIndex = 5;
+            this.txtNewName.Visible = false;
+            // 
+            // txtNewCalories
+            // 
+            this.txtNewCalories.Location = new System.Drawing.Point(12, 69);
+            this.txtNewCalories.Name = "txtNewCalories";
+            this.txtNewCalories.Size = new System.Drawing.Size(93, 20);
+            this.txtNewCalories.TabIndex = 6;
+            this.txtNewCalories.Visible = false;
+            // 
+            // txtNewPrice
+            // 
+            this.txtNewPrice.Location = new System.Drawing.Point(124, 69);
+            this.txtNewPrice.Name = "txtNewPrice";
+            this.txtNewPrice.Size = new System.Drawing.Size(95, 20);
+            this.txtNewPrice.TabIndex = 7;
+            this.txtNewPrice.Visible = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(271, 62);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FoodCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txtNewPrice);
+            this.Controls.Add(this.txtNewCalories);
+            this.Controls.Add(this.txtNewName);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblCalories);
             this.Controls.Add(this.btnEdit);
@@ -110,5 +155,9 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblCalories;
         private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtNewName;
+        private System.Windows.Forms.TextBox txtNewCalories;
+        private System.Windows.Forms.TextBox txtNewPrice;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
