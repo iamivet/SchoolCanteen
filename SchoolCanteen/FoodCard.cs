@@ -1,4 +1,5 @@
-﻿using SchoolCanteen.Data;
+﻿using SchoolCanteen.Controllers;
+using SchoolCanteen.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace SchoolCanteen
 {
     public partial class FoodCard : UserControl
     {
+        private FoodController foodController = new FoodController();
         public FoodCard()
         {
             InitializeComponent();
@@ -28,6 +30,19 @@ namespace SchoolCanteen
             lblFoodName.Text = food.Name;
             lblCalories.Text = $"{food.Calories} kcal";
             lblPrice.Text = $"{food.Price:C}";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foodController.DeleteFood(lblFoodName.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
