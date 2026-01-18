@@ -21,10 +21,5 @@ namespace SchoolCanteen.Controllers
             return dbContext.FoodTypes
                 .ToList();
         }
-
-        public FoodType GetById(int id)
-        {
-            return dbContext.FoodTypes.Find(id);
-        }
     }
 }
