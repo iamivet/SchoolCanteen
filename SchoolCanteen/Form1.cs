@@ -128,7 +128,7 @@ namespace SchoolCanteen
                     return;
                 }
 
-                foodController.AddFood(txtName.Text, calories, price, (foodTypeController.GetById((int)cmbFoodTypes.SelectedValue).Id));
+                foodController.AddFood(txtName.Text, calories, price, (int)cmbFoodTypes.SelectedValue);
 
                 LoadFoodCards();
 
